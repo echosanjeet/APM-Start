@@ -13,10 +13,14 @@ import { HttpClientModule } from "@angular/common/http";
 import { ProductDetailComponent } from './products/product-detail/product-detail.component';
 
 import { RouterModule } from '@angular/router'
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    HomeComponent,
+    AboutComponent,
     ProductListComponent,
     ConvertToSpacesPipe,
     StarComponent,
@@ -27,6 +31,9 @@ import { RouterModule } from '@angular/router'
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot([
+      { path: '', component: HomeComponent },
+      { path: 'home', component: HomeComponent },
+      { path: 'about', component: AboutComponent },
       { path: 'products', component: ProductListComponent },
       { path: 'products/:id', component: ProductDetailComponent }
     ])

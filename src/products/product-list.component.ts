@@ -21,7 +21,7 @@ export class ProductListComponent implements OnInit
     imageWidth: number = 20;
     imageMargin: number = 2;
 
-    showImage: boolean = false;
+    showImage: boolean = true;
 
     errorMeesage: string;
 
